@@ -1,0 +1,84 @@
+* {
+  margin: 0%;
+  box-sizing: border-box;
+}
+
+.main {
+  display: flex;
+}
+
+.image {
+  display: block;
+  height: 100vh;
+  width: 60vw;
+}
+
+h1 {
+  font-weight: 400;
+  font-size: xx-large;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  padding-left: 70px;
+}
+
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+}
+
+.input {
+  width: 28vw;
+  height: 6vh;
+  border-radius: 6px;
+  border: 1px solid #d0d0d0;
+  outline: none;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  padding-left: 10px;
+}
+.blueBtn {
+  width: 28vw;
+  height: 6vh;
+  border-radius: 20px;
+  border: none;
+  background-color: #17a2b8;
+  color: white;
+  font-size: 16px;
+}
+
+.whiteBtn {
+  width: 28vw;
+  height: 6vh;
+  border-radius: 20px;
+  background-color: white;
+  color: #17a2b8;
+  font-size: 16px;
+  border: 1px solid #17a2b8;
+  outline: none;
+}
+
+.loginPart {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+h4 {
+  font-size: 14px;
+  font-weight: 400;
+  color: #828282;
+}
