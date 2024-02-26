@@ -19,6 +19,6 @@ app.get("/", (req, res) => {
 });
 
 app.listen(process.env.PORT, () => {
-   console.log(`Server running on http://localhost:${process.env.PORT}`)
-  
+  mongoose.connect(process.env.MONGOOSE_URL).then(() => console.log(`Server running on http://localhost:${process.env.PORT}`))
+  .catch(error =>console.error(error))
 });
