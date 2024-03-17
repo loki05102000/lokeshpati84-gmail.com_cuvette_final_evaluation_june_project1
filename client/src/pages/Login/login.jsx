@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import Styles from "./login.module.css";
-import image from "./image.png";
-import { Link } from "react-router-dom";
+import image from "../../assets/images/image.png";
+import { Link, useNavigate } from "react-router-dom";
+import axios from "axios";
 
 function Login() {
   const [data, setdata] = useState({
@@ -9,8 +10,25 @@ function Login() {
     password: "",
   });
 
+  const navigate = useNavigate();
+
   const handleChange = ({ currentTarget: input }) => {
     setdata({ ...data, [input.name]: input.value });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      const response = axios.post("http://localhost:8000/login", data);
+      // const token = response.data.token;
+      alert("login successful");
+      navigate("/dashboard");
+      // window.location.reload();
+      // localStorage.setItem("token", token);
+      // .then((response) => console.log(response))
+    } catch (error) {
+      console.log(error);
+    }
   };
   return (
     <div className={Styles.main}>
@@ -21,7 +39,7 @@ function Login() {
         <div className={Styles.heading}>
           <h1>Login</h1>
         </div>
-        <form className={Styles.formContainer}>
+        <form className={Styles.formContainer} onSubmit={handleSubmit}>
           <input
             type="email"
             name="email"

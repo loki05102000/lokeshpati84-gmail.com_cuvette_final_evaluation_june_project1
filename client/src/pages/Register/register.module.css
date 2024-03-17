@@ -30,9 +30,7 @@ h1 {
 .formContainer {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 14px;
+  gap: 5px;
 }
 
 .input {
@@ -51,6 +49,7 @@ input[type="password"] {
 .blueBtn {
   width: 28vw;
   height: 6vh;
+  margin-top: 10px;
   border-radius: 20px;
   border: none;
   background-color: #17a2b8;
@@ -81,4 +80,9 @@ h4 {
   font-size: 14px;
   font-weight: 400;
   color: #828282;
+}
+
+label {
+  font-size: 14px;
+  color: red;
 }
